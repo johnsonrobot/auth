@@ -4,11 +4,12 @@
         <meta charset="utf-8">
         <title>登入畫面</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="action.js"></script>
     </head>
     <body>
         <div class="display">
-            <div><input id="login" type="button" value="Login" onclick="submit"></div>
-            <div><input id="register" type="button" value="Register" onclick="submit"></div>
+            <div><form action="login.php" method="POST"><input id="login" name="login" type="button" value="Login"></form></div>
+            <div><form action="register.php" method="POST"><input id="register" name="register" type="submit" value="Register"></form></div>
         </div>
     </body>
 </html>
