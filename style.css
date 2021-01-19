@@ -1,7 +1,7 @@
 h2{
     font-size: 25px;
     position: absolute;
-    left: 40%;
+    left: 30%;
 }
 .display{
     width: 400px;
@@ -108,7 +108,7 @@ h2{
 
     width: 210px;
     height: 25px;
-    text-align: center;
+    text-align: left;
 
     margin-left: 40px;
 
@@ -142,7 +142,7 @@ h2{
 
     width: 210px;
     height: 25px;
-    text-align: center;
+    text-align: left;
 
     margin-left: 40px;
 
