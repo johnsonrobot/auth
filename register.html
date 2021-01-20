@@ -4,16 +4,27 @@
         <meta charset="utf-8">
         <title>註冊</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="action.js"></script>
     </head>
     <body>
+        <script>
+            function submit_fn(){
+                var user_str = getObject("user1").value
+                var pass_str = getObject("pwd1").value
+                if(user_str == "" || pass_str == ""){
+                    alert("請輸入帳號密碼")
+                    return false
+                }
+                return true
+            }
+        </script>
         <div class="display">
             <h2>Register Account</h2>
-            <form action="" method="POST">
+            <form action="index.html" method="POST">
                 <span id="user">Username</span><input id="user1" name="user" type="text" maxlength="16">
                 <span id="pwd">Password</span><input id="pwd1" name="pwd" type="password" maxlength="16">
-                <input id="reg" type="button" value="submit">
+                <input id="reg" name="submit" type="submit" value="submit" onclick="return submit_fn()">
             </form>
-            
         </div>
     </body>
 </html>
