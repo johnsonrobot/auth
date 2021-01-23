@@ -9,7 +9,7 @@
             require_once "db.php";
             createTable('register_data',
                         'username VARCHAR(16),
-                        password VARCHAR(16),
+                        password VARCHAR(255),
                         index user_id(username(16))');
         ?>
         <br>Finish

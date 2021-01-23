@@ -25,4 +25,11 @@
         $var = stripslashes($var);
         return $connect->real_escape_string($var);
     }
+    function add_user($username, $password){
+        global $connect;
+        $data = $connect->prepare('insert into register_data values(?,?)');
+        $data->bind_param('ss', $username, $password);
+        $data->execute();
+        $data->close();
+    }
 ?>
