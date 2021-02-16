@@ -9,17 +9,13 @@
         $result = query_mysql("select * from register_data where username='$user'");
 
         if($result->num_rows){
-            $msg = "Please change your username";
-            echo $msg;
-            $flag = false;
-            return $flag;
+            $flag = "false";
+            header("Location:register.php?$flag");
         }else{
             add_user($user, $pwd);
             // query_Mysql("insert into register_data values('$user', '$pwd')");
-            $msg = "Create Account Success";
-            echo $msg;
-            $flag = true;
-            return $flag;
+            $flag = "true";
+            header("Location:index.html?$flag");
         }
     }
 ?>
