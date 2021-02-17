@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>註冊</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="action.js"></script>
+    </head>
+    <body>
+        <script>
+            function submit_fn(){
+                var user_str = getObject("user1").value
+                var pass_str = getObject("pwd1").value
+                if(user_str == "" || pass_str == ""){
+                    getObject("hint").innerHTML = "請輸入帳號 & 密碼"
+                    getObject("hint").style.display = "inline"
+                    // alert("請輸入帳號 & 密碼")
+                    return false
+                }
+            }
+        </script>
+        <div class="display">
+            <h2>Login Account</h2>
+            <form action="register.php" method="POST"  onsubmit="return submit_fn()">
+                <span id="user">Username</span><input id="user1" name="user" placeholder="請輸入帳號" type="text" maxlength="16">
+                <span id="pwd">Password</span><input id="pwd1" name="pwd" placeholder="請輸入密碼" type="password" maxlength="16">
+                <input id="reg" name="submit" type="submit" value="submit">
+            </form>
+            <p id="hint"></p>
+        </div>
+    </body>
+</html>
