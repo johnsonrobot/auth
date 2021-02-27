@@ -9,7 +9,12 @@
         $result = query_mysql("select * from register_data where username='$user'");
 
         if($result->num_rows){
-            echo "Login success";
+            //hash verify should be modified
+            if(password_verify($pwd, $pwd_hash)){
+                echo "Password is valid";
+            }else{
+                echo "Invalid Password";
+            }
         }else{
             echo "Login failed";
         }
